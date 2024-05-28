@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Aura!</title>
+  <style>
+    body {
+      background-color: rgb(211, 141, 211);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    .fireworks {
+      z-index: -1;  
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+    h1 {
+      font-size: 4em; /* Large font size */
+      margin: 0;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1>Happy 30th Birthday Aura!</h1>
+  <div class="fireworks">
+
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+  <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+  <script>
+    const container = document.querySelector('.fireworks')
+    const fireworks = new Fireworks.default(container)
+    fireworks.start()
+  </script>
+
+</body>
+</html>
