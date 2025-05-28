@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Aura!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Moontime&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: rgb(211, 141, 211);
@@ -12,13 +13,10 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Moontime', cursive;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
     }
     .fireworks {
       z-index: -1;  
@@ -27,22 +25,73 @@
       left: 0;
       width: 100%;
       height: 100%;
-
     }
     h1 {
-      font-size: 4em; /* Large font size */
-      margin: 0;
+      font-size: 4em;
+      margin: 20px 0;
+      z-index: 1;
+      position: relative;
     }
-    h2 {font-size: 3em; margin:0;}
-
+    h2 {
+      font-size: 3em; 
+      margin: 20px 0;
+      z-index: 1;
+      position: relative;
+    }
+    .content {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .met-image {
+      margin: 20px 0;
+      max-width: 90%;
+      height: auto;
+    }
+    .ballet-container {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .ballet-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .swan-lake-text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-family: 'Moontime', cursive;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
   </style>
-
 </head>
 <body>
-  <h1>Happy Birthday Again!</h1>
-  <h2>Enjoy the Opera!</h2>
-  <div class="fireworks">
-
+  <div class="content">
+    <h1>Happy Birthday Aura!</h1>
+    <div class="fireworks"></div>
+    
+    <img src="met.png" alt="Met Image" class="met-image">
+    <div>
+      <h2>June 14</h2>
+    </div>
+    <div class="ballet-container">
+      <img src="ballet.png" alt="Ballet Image" class="ballet-image">
+      <div class="swan-lake-text">Swan Lake</div>
+    </div>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
@@ -52,6 +101,5 @@
     const fireworks = new Fireworks.default(container)
     fireworks.start()
   </script>
-
 </body>
 </html>
